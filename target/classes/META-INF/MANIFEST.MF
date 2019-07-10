@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Alexandre
+Build-Jdk: 11.0.3
+Implementation-Title: tw-gerenciador-tarefas
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: br.com.treinaweb
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/tw-gerenciador-tarefas
+Created-By: Maven Integration for Eclipse
+
