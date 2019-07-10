@@ -99,5 +99,22 @@ public class TarefasController  {
 		return mv;
 	}
 
+	
+	//@PathVariable e usado para pegar o atributo na url e passar para o parametro
+	@GetMapping("/excluir/{id}")
+	public String excluir(@PathVariable("id") Long id) {
+		repositorioTarefa.deleteById(id);
+		//redirect serve para direcionar para pagina que desejo
+		return "redirect:/tarefas/listar";		
+		
+	}
 
+	//@PathVariable e usado para pegar o atributo na url e passar para o parametro
+	@GetMapping("/concluir/{id}")
+	public String concluir(@PathVariable("id") Long id) {
+		Tarefa tarefa = repositorioTarefa.getOne(id);
+		tarefa.setConcluida(true);
+		repositorioTarefa.save(tarefa);
+		return "redirect:/tarefas/listar";
+	}
 }
